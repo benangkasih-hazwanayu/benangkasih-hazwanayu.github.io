@@ -10,7 +10,7 @@ window.CONTENT = {
     a: 'Hazwan',
     b: 'Ayu',
     aFull: 'Muhammad Hazwan Fakhri',
-    bFull: '[Nama Penuh Ayu]',
+    bFull: 'Ayu Nabila',
     monoA: 'H',
     monoB: 'A'
   },
