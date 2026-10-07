@@ -1,0 +1,63 @@
+/* =====================================================================
+   CONTENT — the only file you edit for wording, dates, venue, contacts.
+   Anything in [square brackets] is a placeholder still to be filled in.
+   ===================================================================== */
+window.CONTENT = {
+  // Default look. Preview others with ?theme=melur or ?theme=malam
+  theme: 'awan',
+
+  couple: {
+    a: 'Hazwan',
+    b: 'Ayu',
+    aFull: 'Muhammad Hazwan Fakhri',
+    bFull: '[Nama Penuh Ayu]',
+    monoA: 'H',
+    monoB: 'A'
+  },
+
+  parents: {
+    father: '[Nama Bapa]',
+    mother: '[Nama Ibu]'
+  },
+
+  event: {
+    // ISO dates with Malaysia offset. Drive the countdown + pre/day/post phases.
+    start: '2027-06-12T11:00:00+08:00',   // [placeholder date]
+    end:   '2027-06-12T16:00:00+08:00',
+    dateLong:  '[Sabtu · 12 Jun 2027]',
+    dateShort: '[12 · 06 · 2027]',
+    dateCard:  '[12 Jun 2027]',
+    timeCard:  '[11 pg – 4 ptg]',
+    dayStart:  '[11:00 pagi]',
+    hijri:     '[DD Zulhijjah 1448H]'
+  },
+
+  venue: {
+    name: '[Nama Dewan]',
+    address: '[Alamat penuh, poskod, negeri]',
+    waze: 'https://waze.com/ul',          // replace with your Waze share link
+    maps: 'https://maps.google.com'       // replace with your Google Maps share link
+  },
+
+  schedule: [
+    { time: '[11:00 pagi]', label: 'Ketibaan tetamu' },
+    { time: '[12:30 tgh]',  label: 'Ketibaan pengantin' },
+    { time: '[4:00 petang]', label: 'Majlis bersurai' }
+  ],
+
+  contacts: [
+    { name: '[Nama]', role: 'Bapa', phone: '' },   // phone as 60123456789
+    { name: '[Nama]', role: 'Ibu',  phone: '' }
+  ],
+
+  music: {
+    src: 'assets/audio/lagu.mp3'   // drop an MP3 here (≈2–3 MB). Missing file = silent toggle.
+  },
+
+  rsvp: { maxPax: 5 },
+
+  features: {
+    intro: true,    // songket loom intro (skip with ?nointro)
+    petals: true    // hujan bunga
+  }
+};
