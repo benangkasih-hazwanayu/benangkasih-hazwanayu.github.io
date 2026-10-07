@@ -1,0 +1,64 @@
+/* =====================================================================
+   THEMES — colour tokens only. A new look = a new [data-theme] block.
+   base.css never contains a hex colour; it reads these variables.
+   ===================================================================== */
+
+/* Awan Larat — ivory + gold */
+[data-theme="awan"] {
+  --bg: #F7F2E8;
+  --surface: #FFFCF5;
+  --ink: #2B2620;
+  --muted: #6B6152;
+  --line: #DACDB2;
+  --accent: #A3834A;
+  --accent-ink: #7A5F2E;
+  --btn: #3B3226;
+  --btn-ink: #F7F2E8;
+  --nav: #FFFCF5;
+  --petal: #FFFFFF;
+  --err: #A33A2A;
+  --intro-bg: #1C1712;
+  --thread: #D4B677;
+  --glow: rgba(212, 182, 119, .35);
+  --backdrop: #E9E1D0;
+}
+
+/* Melur — sage + jasmine white */
+[data-theme="melur"] {
+  --bg: #F2F4EE;
+  --surface: #FFFFFF;
+  --ink: #22302A;
+  --muted: #56665B;
+  --line: #CFD8CB;
+  --accent: #6E8B68;
+  --accent-ink: #4A6646;
+  --btn: #2E4A3B;
+  --btn-ink: #F2F4EE;
+  --nav: #FFFFFF;
+  --petal: #FFFFFF;
+  --err: #A33A2A;
+  --intro-bg: #15221B;
+  --thread: #E6ECDF;
+  --glow: rgba(230, 236, 223, .3);
+  --backdrop: #E1E7DC;
+}
+
+/* Malam — navy + champagne */
+[data-theme="malam"] {
+  --bg: #13203A;
+  --surface: #1A2B4A;
+  --ink: #F4ECDD;
+  --muted: #BDB29F;
+  --line: #34486C;
+  --accent: #C9A96E;
+  --accent-ink: #D9BE88;
+  --btn: #C9A96E;
+  --btn-ink: #13203A;
+  --nav: #1A2B4A;
+  --petal: #F4ECDD;
+  --err: #F0A08F;
+  --intro-bg: #0A1222;
+  --thread: #D9BE88;
+  --glow: rgba(217, 190, 136, .35);
+  --backdrop: #0C1528;
+}
