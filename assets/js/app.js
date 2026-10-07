@@ -113,13 +113,26 @@
     readyCover();
   }
 
-  var audio = $('#audio'), musicBtn = $('#musicBtn');
+  var audio = $('#audio'), musicBtn = $('#musicBtn'), fadeTimer;
+  function fadeIn(ms) {                   // iOS ignores .volume, so there it just starts at full volume
+    clearInterval(fadeTimer);
+    audio.volume = 0;
+    var t0 = Date.now();
+    fadeTimer = setInterval(function () {
+      var k = Math.min(1, (Date.now() - t0) / ms);
+      audio.volume = k * k;               // ease-in: sounds smoother than a linear ramp
+      if (k === 1) clearInterval(fadeTimer);
+    }, 50);
+  }
   function setMusic(on) {
     musicBtn.classList.toggle('is-playing', on);
     musicBtn.setAttribute('aria-label', on ? 'Matikan muzik' : 'Mainkan muzik');
     if (!C.music || !C.music.src) return;
     if (!audio.src) audio.src = C.music.src;
-    if (on) { var p = audio.play(); if (p && p.catch) p.catch(function () {}); } else { audio.pause(); }
+    if (on) {
+      fadeIn(3000);
+      var p = audio.play(); if (p && p.catch) p.catch(function () {});
+    } else { clearInterval(fadeTimer); audio.pause(); }
   }
   musicBtn.addEventListener('click', function () { setMusic(!musicBtn.classList.contains('is-playing')); });
 
