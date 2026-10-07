@@ -42,12 +42,18 @@ Flow: intro (loom built in JS, about 5.4s) → `#cover` → tap `#openBtn`, whic
 
 ## Deploy
 
-GitHub Pages serves the site from `main`. To deploy, commit on `main` and run `git push origin main`. The site is live about a minute later.
+GitHub Pages serves the site from `main`, which tracks `origin/main`. Deploy through git CLI only. **Never use browser automation** (Chrome or the built-in browser) to deploy, upload files or change GitHub settings.
 
-- Deploy through git CLI only. **Never use browser automation** (Chrome or the built-in browser) to deploy, upload files or change GitHub settings.
-- Push only to `origin` = `github.com/benangkasih-hazwanayu/benangkasih-hazwanayu.github.io`. Never add or push to any other remote. Before pushing, run `git remote -v` and stop if it shows anything unexpected.
-- Don't change this repo's local git identity (`user.name` / `user.email`).
-- Always ask before committing or pushing.
+Steps (committing and pushing each need the user's approval; one request such as "commit and push" approves both):
+1. Bump `?v=N` in `index.html` for each CSS/JS file you changed (see Cache busting).
+2. Check the remote and identity: `git remote -v` must show only `origin` = `github.com/benangkasih-hazwanayu/benangkasih-hazwanayu.github.io`, and `git config user.email` must be the personal Gmail. Stop if either looks different. Never add another remote, and don't change this repo's local `user.name` / `user.email`.
+3. Stage specific files (not `git add -A`) and commit on `main`.
+4. `git push origin main`. The site is live about a minute later. Never force-push: `origin/main` holds the deploy history.
+
+Troubleshooting:
+- **Push hangs:** Git Credential Manager is waiting on a GitHub sign-in window. Stop and have the user run `! git push origin main` and sign in as `benangkasih-hazwanayu`. The login is saved after that.
+- **Push rejected (non-fast-forward):** someone pushed from elsewhere. Run `git pull --rebase origin main`, then push again. Don't force-push.
+- **`index.lock` / `HEAD.lock` "File exists":** a crashed git command left a lock. Check that no git process is running and the lock is old, then ask the user before deleting it.
 
 ## Cache busting
 
