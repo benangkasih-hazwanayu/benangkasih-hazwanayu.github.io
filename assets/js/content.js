@@ -26,6 +26,10 @@ window.CONTENT = {
     end:   '2027-07-03T16:00:00+08:00',
     dateLong:  'Sabtu · 3 Julai 2027',
     dateShort: '03 · 07 · 2027',
+    dayName:   'Sabtu',              // date block: Sabtu | Julai 3 2027 | time
+    dayNum:    '3',
+    month:     'Julai',
+    year:      '2027',
     dateCard:  '3 Julai 2027',
     timeCard:  '[11 pg – 4 ptg]',
     dayStart:  '[11:00 pagi]',

@@ -21,6 +21,9 @@
   --thread: #D4B677;
   --glow: rgba(212, 182, 119, .35);
   --backdrop: #E9E1D0;
+  --cover-bg: #3B3226;
+  --cover-ink: #F7F2E8;
+  --gold: #A3834A;
 }
 
 /* Melur — sage + jasmine white */
@@ -41,6 +44,9 @@
   --thread: #E6ECDF;
   --glow: rgba(230, 236, 223, .3);
   --backdrop: #E1E7DC;
+  --cover-bg: #2E4A3B;
+  --cover-ink: #F2F4EE;
+  --gold: #9DAA86;
 }
 
 /* Malam — navy + champagne */
@@ -61,6 +67,9 @@
   --thread: #D9BE88;
   --glow: rgba(217, 190, 136, .35);
   --backdrop: #0C1528;
+  --cover-bg: #0A1222;
+  --cover-ink: #F4ECDD;
+  --gold: #C9A96E;
 }
 
 /* Marun — blush ivory + maroon, gold thread */
@@ -81,4 +90,7 @@
   --thread: #D4B677;
   --glow: rgba(212, 182, 119, .35);
   --backdrop: #EBDCD7;
+  --cover-bg: #5E1420;
+  --cover-ink: #F8F0EC;
+  --gold: #B08D57;
 }
