@@ -22,14 +22,14 @@ window.CONTENT = {
 
   event: {
     // ISO dates with Malaysia offset. Drive the countdown + pre/day/post phases.
-    start: '2027-06-12T11:00:00+08:00',   // [placeholder date]
-    end:   '2027-06-12T16:00:00+08:00',
-    dateLong:  '[Sabtu · 12 Jun 2027]',
-    dateShort: '[12 · 06 · 2027]',
-    dateCard:  '[12 Jun 2027]',
+    start: '2027-07-03T11:00:00+08:00',
+    end:   '2027-07-03T16:00:00+08:00',
+    dateLong:  'Sabtu · 3 Julai 2027',
+    dateShort: '03 · 07 · 2027',
+    dateCard:  '3 Julai 2027',
     timeCard:  '[11 pg – 4 ptg]',
     dayStart:  '[11:00 pagi]',
-    hijri:     '[DD Zulhijjah 1448H]'
+    hijri:     '28 Muharram 1449H'
   },
 
   venue: {
