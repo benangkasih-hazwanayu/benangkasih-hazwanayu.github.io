@@ -3,7 +3,7 @@
    and the (mock) RSVP / ucapan / calendar. No framework, no build step.
 
    URL switches for previewing:
-     ?theme=awan|melur|malam   ?phase=pre|day|post   ?to=Pak%20Ali   ?nointro
+     ?theme=marun|awan|melur|malam   ?phase=pre|day|post   ?to=Pak%20Ali   ?nointro
    ===================================================================== */
 (function () {
   'use strict';

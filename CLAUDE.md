@@ -10,7 +10,7 @@ Static, single-page digital wedding invitation (Malay, `lang="ms"`) for Hazwan &
 
 Open `index.html` directly in a browser, or serve the folder (for example `python -m http.server`). Use URL switches to preview states without changing the date or config:
 
-- `?theme=awan|melur|malam` sets the theme
+- `?theme=marun|awan|melur|malam` sets the theme
 - `?phase=pre|day|post` forces the event phase
 - `?to=Pak%20Ali` adds the personal "Kepada …" greeting
 - `?nointro` skips the songket loom intro

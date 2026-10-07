@@ -62,3 +62,23 @@
   --glow: rgba(217, 190, 136, .35);
   --backdrop: #0C1528;
 }
+
+/* Marun — blush ivory + maroon, gold thread */
+[data-theme="marun"] {
+  --bg: #F8F0EC;
+  --surface: #FFFAF7;
+  --ink: #3A1A1F;
+  --muted: #7A5A5E;
+  --line: #E3C9C6;
+  --accent: #7B1E2B;
+  --accent-ink: #5E1420;
+  --btn: #6B1A26;
+  --btn-ink: #F8F0EC;
+  --nav: #FFFAF7;
+  --petal: #F6E3E0;
+  --err: #A33A2A;
+  --intro-bg: #2A0E14;
+  --thread: #D4B677;
+  --glow: rgba(212, 182, 119, .35);
+  --backdrop: #EBDCD7;
+}

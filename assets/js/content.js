@@ -3,8 +3,8 @@
    Anything in [square brackets] is a placeholder still to be filled in.
    ===================================================================== */
 window.CONTENT = {
-  // Default look. Preview others with ?theme=melur or ?theme=malam
-  theme: 'awan',
+  // Default look. Preview others with ?theme=awan, ?theme=melur or ?theme=malam
+  theme: 'marun',
 
   couple: {
     a: 'Hazwan',
