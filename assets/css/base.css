@@ -126,12 +126,9 @@ body.is-locked .card { transform: scale(.96); opacity: 0; }
 
 /* Hero */
 /* Hero: editorial layout (vertical day, oversized staggered names, ruled date) */
-.hero { min-height: 88vh; min-height: 88svh; padding: 28px 24px; display: flex; flex-direction: column; gap: 16px; }
+.hero { position: relative; min-height: 88vh; min-height: 88svh; padding: 28px 24px; display: flex; flex-direction: column; gap: 16px; }
 .hero__top { display: flex; justify-content: space-between; align-items: center; }
 .hero__top .eyebrow { text-align: left; }
-.seal--sm { width: 60px; height: 60px; }
-.seal--sm .seal__txt { font-size: 16px; gap: 5px; }
-.seal--sm .seal__txt i { height: 14px; }
 .hero__body { flex: 1; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 14px; margin-top: 12px; }
 .hero__day { writing-mode: vertical-rl; text-orientation: upright; padding-right: 10px; border-right: 1px solid var(--gold); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
 .hero__names { margin: 0; display: flex; flex-direction: column; font-weight: 400; }
@@ -146,7 +143,7 @@ body.is-locked .card { transform: scale(.96); opacity: 0; }
 /* Invitation text */
 .invite p { margin: 0; }
 .invite--dark {                                          /* maroon band with an arched top, echoing the cover */
-  margin-top: 12px; padding: 76px 32px 60px; background: var(--cover-bg); color: var(--cover-ink);
+  position: relative; margin-top: 12px; padding: 76px 32px 60px; background: var(--cover-bg); color: var(--cover-ink);
   border-radius: 50% 50% 0 0 / 64px 64px 0 0;
   display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;
 }
@@ -256,7 +253,15 @@ body.is-locked .card { transform: scale(.96); opacity: 0; }
   box-shadow: 0 10px 30px rgba(0, 0, 0, .18);
 }
 .cover.is-lifting { transform: translateY(-105%); }
-.cover__inner { width: min(100%, var(--col)); padding: 22px 18px; display: flex; }
+.cover__inner { position: relative; width: min(100%, var(--col)); padding: 22px 18px; display: flex; }
+
+/* Painted flowers (assets/img/flowers): decorative, never block taps */
+.fl { position: absolute; z-index: 2; height: auto; pointer-events: none; user-select: none; }
+.fl--cover-tr { top: 2px; right: -4px; width: 150px; }
+.fl--cover-bl { bottom: 4px; left: -4px; width: 160px; }
+.fl--hero { top: -10px; right: -12px; width: 165px; transform: rotate(180deg); }
+.fl--band { top: -46px; left: 50%; width: 230px; transform: translateX(-50%); }
+.fl--foot { position: static; align-self: center; width: 170px; margin-top: 6px; }
 .arch {
   position: relative; flex: 1; padding: 52px 26px 30px; background: var(--bg);
   border-radius: 50% 50% 16px 16px / 190px 190px 16px 16px;
