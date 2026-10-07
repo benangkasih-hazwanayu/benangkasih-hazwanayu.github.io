@@ -32,7 +32,7 @@ How the HTML is driven:
 - `data-guest` / `data-guest-line` are filled or unhidden from `?to=`.
 - `.reveal` elements fade in through an IntersectionObserver. Respect `prefers-reduced-motion`: the existing code disables the intro, petals and reveals.
 
-Flow: intro (loom built in JS, about 5.4s) → `#cover` → tap `#openBtn`, which unlocks scrolling, starts music (the tap is the user gesture browsers require for autoplay) and starts petals.
+Flow: intro (loom built in JS, about 4.3s) → `#cover` → tap `#openBtn`, which unlocks scrolling, starts music (the tap is the user gesture browsers require for autoplay) and starts petals.
 
 ## Pending integration points
 

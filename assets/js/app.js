@@ -72,14 +72,14 @@
       el = document.createElement('div');
       el.className = i % 2 ? 'warp u' : 'warp';
       el.style.left = (15 + i * 30) + 'px';
-      el.style.animationDelay = (i * 0.06) + 's';
+      el.style.animationDelay = (i * 0.045) + 's';
       frag.appendChild(el);
     }
     for (j = 0; j < 28; j++) {
       el = document.createElement('div');
       el.className = j % 2 ? 'weft r' : 'weft';
       el.style.top = (15 + j * 30) + 'px';
-      el.style.animationDelay = (1 + j * 0.03) + 's';
+      el.style.animationDelay = (0.75 + j * 0.022) + 's';
       frag.appendChild(el);
     }
     for (i = 0; i < 13; i++) for (j = 0; j < 28; j++) {
@@ -90,7 +90,7 @@
       el.className = (i + j) % 4 === 0 ? 'dia s' : 'dia';
       el.style.left = (x - 3.5) + 'px';
       el.style.top = (y - 3.5) + 'px';
-      el.style.animationDelay = (1.7 + dist * 1.2).toFixed(2) + 's';
+      el.style.animationDelay = (1.3 + dist * 0.9).toFixed(2) + 's';
       frag.appendChild(el);
     }
     loom.appendChild(frag);
@@ -106,8 +106,8 @@
   if (introOn) {
     buildLoom();
     intro.hidden = false;
-    introTimers.push(setTimeout(readyCover, 4300));
-    introTimers.push(setTimeout(endIntro, 5400));
+    introTimers.push(setTimeout(readyCover, 3200));
+    introTimers.push(setTimeout(endIntro, 4300));
     $('#skipIntro').addEventListener('click', endIntro);
   } else {
     readyCover();
