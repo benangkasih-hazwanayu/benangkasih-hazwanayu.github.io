@@ -96,7 +96,43 @@
     loom.appendChild(frag);
   }
 
-  function readyCover() { cover.classList.add('is-ready'); }
+  var audio = $('#audio'), musicBtn = $('#musicBtn'), fadeTimer;
+  var hasMusic = !!(C.music && C.music.src);
+  if (hasMusic) { audio.preload = 'auto'; audio.src = C.music.src; }   // buffer during the intro
+  function fadeIn(ms) {                   // iOS ignores .volume, so there it just starts at full volume
+    clearInterval(fadeTimer);
+    audio.volume = 0;
+    var t0 = Date.now();
+    fadeTimer = setInterval(function () {
+      var k = Math.min(1, (Date.now() - t0) / ms);
+      audio.volume = k * k;               // ease-in: sounds smoother than a linear ramp
+      if (k === 1) clearInterval(fadeTimer);
+    }, 50);
+  }
+  function setMusic(on) {
+    musicBtn.classList.toggle('is-playing', on);
+    musicBtn.setAttribute('aria-label', on ? 'Matikan muzik' : 'Mainkan muzik');
+    if (!hasMusic) return;
+    if (on) {
+      if (!audio.paused) return;          // already playing (autoplay worked): don't restart the fade
+      fadeIn(3000);
+      var p = audio.play(); if (p && p.catch) p.catch(function () {});
+    } else { clearInterval(fadeTimer); audio.pause(); }
+  }
+  musicBtn.addEventListener('click', function () { setMusic(!musicBtn.classList.contains('is-playing')); });
+
+  // Try to fade the song in with the cover. Most phones block sound before a tap;
+  // then play() rejects and the "Buka Jemputan" tap starts it instead.
+  var autoplayTried = false;
+  function tryAutoplay() {
+    if (!hasMusic || autoplayTried) return;
+    autoplayTried = true;
+    fadeIn(3000);
+    var p = audio.play();
+    if (p && p.catch) p.catch(function () { clearInterval(fadeTimer); });
+  }
+
+  function readyCover() { cover.classList.add('is-ready'); tryAutoplay(); }
   function endIntro() {
     introTimers.forEach(clearTimeout);
     intro.hidden = true;
@@ -112,29 +148,6 @@
   } else {
     readyCover();
   }
-
-  var audio = $('#audio'), musicBtn = $('#musicBtn'), fadeTimer;
-  function fadeIn(ms) {                   // iOS ignores .volume, so there it just starts at full volume
-    clearInterval(fadeTimer);
-    audio.volume = 0;
-    var t0 = Date.now();
-    fadeTimer = setInterval(function () {
-      var k = Math.min(1, (Date.now() - t0) / ms);
-      audio.volume = k * k;               // ease-in: sounds smoother than a linear ramp
-      if (k === 1) clearInterval(fadeTimer);
-    }, 50);
-  }
-  function setMusic(on) {
-    musicBtn.classList.toggle('is-playing', on);
-    musicBtn.setAttribute('aria-label', on ? 'Matikan muzik' : 'Mainkan muzik');
-    if (!C.music || !C.music.src) return;
-    if (!audio.src) audio.src = C.music.src;
-    if (on) {
-      fadeIn(3000);
-      var p = audio.play(); if (p && p.catch) p.catch(function () {});
-    } else { clearInterval(fadeTimer); audio.pause(); }
-  }
-  musicBtn.addEventListener('click', function () { setMusic(!musicBtn.classList.contains('is-playing')); });
 
   $('#openBtn').addEventListener('click', function () {
     cover.classList.add('is-lifting');
