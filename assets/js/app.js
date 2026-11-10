@@ -35,7 +35,7 @@
   });
   renderList($('#contacts'), $('#tplContact'), C.contacts, function (a, c) {
     a.href = 'https://wa.me/' + (c.phone || '');
-    a.children[0].textContent = c.name + ' · ' + c.role;
+    a.children[0].textContent = c.name + ' (' + c.role + ')';
   });
 
   /* ---------- 3. Personal greeting (?to=) ---------- */
@@ -293,7 +293,7 @@
     wishes.unshift({ name: wName.value.trim() || 'Tetamu', text: text });
     var node = $('#tplWish').content.firstElementChild.cloneNode(true);
     node.querySelector('q').textContent = text;
-    node.querySelector('small').textContent = wishes[0].name + ' · baru sahaja';
+    node.querySelector('small').textContent = wishes[0].name + ', baru sahaja';
     $('#wishes').prepend(node);
     $('#wishCount').textContent = wishes.length;
     $('#wishEmpty').hidden = true;

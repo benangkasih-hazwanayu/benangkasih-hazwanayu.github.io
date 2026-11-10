@@ -10,15 +10,16 @@
 <!-- WhatsApp / social preview: image must be an ABSOLUTE url, ~1200x630, < 300KB -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Walimatul Urus · Hazwan &amp; Ayu">
-<meta property="og:description" content="Sabtu · 3 Julai 2027 · [Nama Dewan]">
+<meta property="og:description" content="Sabtu, 3 Julai 2027, [Nama Dewan]">
 <meta property="og:url" content="https://benangkasih-hazwanayu.github.io/">
 <meta property="og:image" content="https://benangkasih-hazwanayu.github.io/assets/img/og-preview.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri&family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/css/themes.css?v=4">
-<link rel="stylesheet" href="assets/css/base.css?v=8">
+<script>document.documentElement.className += ' js';</script>
+<link rel="stylesheet" href="assets/css/themes.css?v=5">
+<link rel="stylesheet" href="assets/css/base.css?v=9">
 </head>
 <body class="is-locked">
 
@@ -52,7 +53,7 @@
       <div class="medal__txt"><span data-bind="couple.monoA"></span><small>&amp;</small><span data-bind="couple.monoB"></span></div>
     </div>
     <div class="intro__cap rise" style="bottom:64px; animation-delay:2.3s">
-      <span style="font-size:11px; letter-spacing:.4em; text-transform:uppercase">Walimatul Urus</span>
+      <span style="font-size:14px">Walimatul Urus</span>
     </div>
   </div>
   <button class="intro__skip" id="skipIntro" type="button">Langkau</button>
@@ -97,35 +98,11 @@
 
   <!-- Day-of: directions first -->
   <section class="dayof" data-phase="day">
-    <div style="display:flex; align-items:center; gap:8px; font-size:12px; letter-spacing:.18em; text-transform:uppercase">
-      <span style="width:8px; height:8px; border-radius:50%; background:var(--btn-ink)"></span>Hari ini · Bermula <span data-bind="event.dayStart"></span>
-    </div>
+    <div style="font-size:14px">Hari ini, bermula <span data-bind="event.dayStart"></span></div>
     <div class="display" style="font-size:26px; line-height:1.2">Jom terus ke lokasi</div>
     <div class="btn-row">
       <a class="btn btn--inv" data-href="venue.waze" target="_blank" rel="noopener">Waze</a>
       <a class="btn" data-href="venue.maps" target="_blank" rel="noopener">Google Maps</a>
-    </div>
-  </section>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero__top">
-      <span class="eyebrow">Walimatul Urus</span>
-    </div>
-    <img class="fl fl--hero" src="assets/img/flowers/corner-bl.webp" alt="" aria-hidden="true">
-    <div class="hero__body">
-      <div class="hero__day" data-bind="event.dayName" aria-hidden="true"></div>
-      <h1 class="hero__names">
-        <span class="names" data-bind="couple.a"></span>
-        <span class="amp">&amp;</span>
-        <span class="names" data-bind="couple.b"></span>
-      </h1>
-    </div>
-    <div class="hero__date" data-bind="event.dateShort"></div>
-    <div class="hero__meta muted"><span data-bind="event.hijri"></span> · <span data-bind="event.dayStart"></span></div>
-    <div class="muted" style="font-size:13px" data-guest-line hidden>Kepada <span style="color:var(--ink)" data-guest></span></div>
-    <div class="hero__hint" aria-hidden="true">Tatal
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg>
     </div>
   </section>
 
@@ -141,9 +118,9 @@
 
   <!-- Details -->
   <section class="section reveal" id="butiran">
-    <h2 class="sec"><small>01</small>Butiran</h2>
+    <h2 class="sec">Butiran</h2>
     <dl class="facts">
-      <div><dt>Tarikh</dt><dd data-bind="event.dateCard"></dd></div>
+      <div><dt>Tarikh</dt><dd><span data-bind="event.dateCard"></span><small data-bind="event.hijri"></small></dd></div>
       <div><dt>Masa</dt><dd data-bind="event.timeCard"></dd></div>
       <div><dt>Tempat</dt><dd data-bind="venue.name"></dd></div>
     </dl>
@@ -175,14 +152,14 @@
 
   <!-- Aturcara -->
   <section class="section reveal">
-    <h2 class="sec"><small>02</small>Aturcara</h2>
+    <h2 class="sec">Aturcara</h2>
     <ol class="timeline" id="schedule"></ol>
     <template id="tplSchedule"><li><span class="t"></span><span class="muted"></span></li></template>
   </section>
 
   <!-- Lokasi -->
   <section class="section reveal" id="lokasi">
-    <h2 class="sec"><small>03</small>Lokasi</h2>
+    <h2 class="sec">Lokasi</h2>
     <div class="venue" data-bind="venue.name"></div>
     <div class="muted" style="font-size:14px; margin-top:-6px" data-bind="venue.address"></div>
     <div class="placeholder" style="height:150px">[Peta lokasi]</div>
@@ -194,7 +171,7 @@
 
   <!-- RSVP (mock: no backend yet) -->
   <section class="section reveal" id="rsvp">
-    <h2 class="sec"><small>04</small>Kehadiran</h2>
+    <h2 class="sec">Kehadiran</h2>
 
     <form id="rsvpForm" data-phase="pre" novalidate style="display:flex; flex-direction:column; gap:14px">
       <label class="field" id="rsvpNameField">Nama anda
@@ -230,7 +207,7 @@
 
   <!-- Ucapan (mock: stays in this browser only) -->
   <section class="section reveal">
-    <h2 class="sec"><small>05</small>Ucapan <span class="sec__count" id="wishCount">0</span></h2>
+    <h2 class="sec">Ucapan <span class="sec__count" id="wishCount">0</span></h2>
     <form id="wishForm" novalidate style="display:flex; flex-direction:column; gap:12px">
       <label class="field">Nama
         <input type="text" id="wishName" placeholder="Nama anda">
@@ -247,7 +224,7 @@
 
   <!-- Hubungi -->
   <section class="section reveal" id="hubungi" style="padding-bottom:56px">
-    <h2 class="sec"><small>06</small>Hubungi</h2>
+    <h2 class="sec">Hubungi</h2>
     <div id="contacts" style="display:flex; flex-direction:column; gap:10px"></div>
     <template id="tplContact"><a class="contact btn" target="_blank" rel="noopener"><span></span><span>WhatsApp</span></a></template>
     <div style="margin-top:28px"><div class="seal-line" aria-hidden="true"><div class="seal"><svg><use href="#wreath"/></svg><span class="seal__txt"><span data-bind="couple.monoA"></span><i></i><span data-bind="couple.monoB"></span></span></div></div></div>
@@ -270,14 +247,14 @@
   <div class="sheet__panel" role="dialog" aria-modal="true" aria-labelledby="calTitle">
     <div class="sheet__grip"></div>
     <div class="display" style="font-size:24px" id="calTitle">Simpan tarikh</div>
-    <div class="muted" style="font-size:14px; margin-top:-6px">Walimatul Urus <span data-bind="couple.a"></span> &amp; <span data-bind="couple.b"></span> · <span data-bind="event.dateCard"></span></div>
+    <div class="muted" style="font-size:14px; margin-top:-6px">Walimatul Urus <span data-bind="couple.a"></span> &amp; <span data-bind="couple.b"></span>, <span data-bind="event.dateCard"></span></div>
     <a class="sheet__opt btn" id="gcalLink" target="_blank" rel="noopener">Google Calendar</a>
     <button class="sheet__opt btn" id="icsBtn" type="button">Apple / Outlook (.ics)</button>
     <button class="link-btn" type="button" data-close style="color:var(--muted); text-decoration:none">Tutup</button>
   </div>
 </div>
 
-<script src="assets/js/content.js?v=5"></script>
-<script src="assets/js/app.js?v=6"></script>
+<script src="assets/js/content.js?v=6"></script>
+<script src="assets/js/app.js?v=7"></script>
 </body>
 </html>

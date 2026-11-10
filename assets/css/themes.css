@@ -3,6 +3,14 @@
    base.css never contains a hex colour; it reads these variables.
    ===================================================================== */
 
+/* Shared shadow and scrim shades (every theme) */
+:root {
+  --shade-1: rgba(0, 0, 0, .08);
+  --shade-2: rgba(0, 0, 0, .18);
+  --shade-3: rgba(0, 0, 0, .3);
+  --scrim: rgba(10, 10, 10, .4);
+}
+
 /* Awan Larat — ivory + gold */
 [data-theme="awan"] {
   --bg: #F7F2E8;
