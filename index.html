@@ -16,10 +16,10 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri&family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri&family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@400;500&display=swap">
 <script>document.documentElement.className += ' js';</script>
 <link rel="stylesheet" href="assets/css/themes.css?v=5">
-<link rel="stylesheet" href="assets/css/base.css?v=9">
+<link rel="stylesheet" href="assets/css/base.css?v=10">
 </head>
 <body class="is-locked">
 
@@ -37,24 +37,24 @@
     <symbol id="divider" viewBox="0 0 220 32" fill="none" stroke="currentColor" stroke-width="1.2">
       <path d="M0 16 H78 C88 16 92 6 100 6 C108 6 110 16 104 19 C98 22 94 15 99 13"/>
       <path d="M220 16 H142 C132 16 128 6 120 6 C112 6 110 16 116 19 C122 22 126 15 121 13"/>
-      <circle cx="110" cy="16" r="2.5" fill="currentColor" stroke="none"/>
+      <path d="M104 24 C107 27 110 28 110 28 C110 28 113 27 116 24" stroke-width="1"/>
     </symbol>
   </defs>
 </svg>
 
-<!-- ========== INTRO: songket loom (built by app.js) ========== -->
+<!-- ========== INTRO: a gold flourish draws itself round the monogram ========== -->
 <div class="intro" id="intro" hidden>
   <div class="intro__stage">
-    <div class="loom" id="loom" aria-hidden="true"></div>
-    <div class="intro__cap rise" style="top:54px; animation-delay:.2s">
-      <span class="arabic" lang="ar" dir="rtl" style="font-size:22px; color:var(--thread)">بسم الله الرحمن الرحيم</span>
+    <span class="arabic intro__bism rise" lang="ar" dir="rtl">بسم الله الرحمن الرحيم</span>
+    <div class="intro__seal">
+      <svg class="intro__wreath" aria-hidden="true"><use href="#wreath"/></svg>
+      <span class="intro__mono"><span data-bind="couple.monoA"></span><small>&amp;</small><span data-bind="couple.monoB"></span></span>
     </div>
-    <div class="medal">
-      <div class="medal__txt"><span data-bind="couple.monoA"></span><small>&amp;</small><span data-bind="couple.monoB"></span></div>
-    </div>
-    <div class="intro__cap rise" style="bottom:64px; animation-delay:2.3s">
-      <span style="font-size:14px">Walimatul Urus</span>
-    </div>
+    <svg class="draw intro__curl" viewBox="0 0 300 140" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+      <path d="M10 10 C10 70 60 100 110 80 C150 64 140 20 110 24 C88 27 92 52 112 50"/>
+      <path d="M290 10 C290 70 240 100 190 80 C150 64 160 20 190 24 C212 27 208 52 188 50"/>
+    </svg>
+    <span class="intro__cap rise">Walimatul Urus</span>
   </div>
   <button class="intro__skip" id="skipIntro" type="button">Langkau</button>
 </div>
@@ -65,23 +65,23 @@
     <img class="fl fl--cover-tr" src="assets/img/flowers/corner-tr.webp" alt="" aria-hidden="true">
     <img class="fl fl--cover-bl" src="assets/img/flowers/corner-bl.webp" alt="" aria-hidden="true">
     <div class="arch">
-      <div style="margin:auto 0; width:100%; display:flex; flex-direction:column; align-items:center">
-      <svg class="draw" width="190" height="89" viewBox="0 0 300 140" fill="none" stroke="var(--accent)" stroke-width="1.6" aria-hidden="true">
-        <path d="M10 130 C10 70 60 40 110 60 C150 76 140 120 110 116 C88 113 92 88 112 90"/>
-        <path d="M290 130 C290 70 240 40 190 60 C150 76 160 120 190 116 C212 113 208 88 188 90"/>
-      </svg>
-      <div class="rise" style="display:flex; flex-direction:column; align-items:center; gap:6px; width:100%; margin:28px 0 auto">
-        <div class="eyebrow">Walimatul Urus</div>
-        <div class="names" data-bind="couple.a"></div>
-        <div class="amp">&amp;</div>
-        <div class="names" data-bind="couple.b"></div>
-        <div class="dateblock"><span data-bind="event.dayName"></span><span class="dateblock__mid"><small data-bind="event.month"></small><b data-bind="event.dayNum"></b><small data-bind="event.year"></small></span><span data-bind="event.dayStart"></span></div>
+      <div class="arch__body">
+        <svg class="draw arch__curl" viewBox="0 0 300 140" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <path d="M10 130 C10 70 60 40 110 60 C150 76 140 120 110 116 C88 113 92 88 112 90"/>
+          <path d="M290 130 C290 70 240 40 190 60 C150 76 160 120 190 116 C212 113 208 88 188 90"/>
+        </svg>
+        <div class="arch__names rise">
+          <p class="names" data-bind="couple.a"></p>
+          <p class="amp">&amp;</p>
+          <p class="names" data-bind="couple.b"></p>
+        </div>
+        <div class="dateblock rise"><span data-bind="event.dayName"></span><span class="dateblock__mid"><small data-bind="event.month"></small><b data-bind="event.dayNum"></b><small data-bind="event.year"></small></span><span data-bind="event.dayStart"></span></div>
+        <p class="arch__title rise">Walimatul Urus</p>
       </div>
-      </div>
-      <div class="rise" style="display:flex; flex-direction:column; align-items:center; gap:12px; animation-delay:.6s">
-        <div class="muted" style="font-size:13px" data-guest-line hidden>Kepada <span style="color:var(--ink)" data-guest></span></div>
+      <div class="arch__foot rise">
+        <p class="arch__guest" data-guest-line hidden>Kepada <span data-guest></span></p>
         <button class="cover__cta" id="openBtn" type="button">Buka Jemputan</button>
-        <div class="muted" style="font-size:12px">Dengan iringan muzik</div>
+        <p class="arch__note">Dengan iringan muzik</p>
       </div>
     </div>
   </div>
@@ -98,29 +98,36 @@
 
   <!-- Day-of: directions first -->
   <section class="dayof" data-phase="day">
-    <div style="font-size:14px">Hari ini, bermula <span data-bind="event.dayStart"></span></div>
-    <div class="display" style="font-size:26px; line-height:1.2">Jom terus ke lokasi</div>
+    <p>Hari ini, bermula <span data-bind="event.dayStart"></span></p>
+    <p class="dayof__head">Jom terus ke lokasi</p>
     <div class="btn-row">
       <a class="btn btn--inv" data-href="venue.waze" target="_blank" rel="noopener">Waze</a>
       <a class="btn" data-href="venue.maps" target="_blank" rel="noopener">Google Maps</a>
     </div>
   </section>
 
-  <!-- Invitation -->
-  <section class="invite invite--dark reveal">
+  <!-- Invitation: the maroon band the cover opens onto -->
+  <section class="invite reveal">
     <img class="fl fl--band" src="assets/img/flowers/spray.webp" alt="" aria-hidden="true">
-    <div class="arabic" style="font-size:26px" lang="ar" dir="rtl">بسم الله الرحمن الرحيم</div>
-    <p class="muted">Dengan penuh kesyukuran, kami</p>
-    <p class="lg"><span data-bind="parents.father"></span><br>&amp;<br><span data-bind="parents.mother"></span></p>
-    <p class="muted">dengan hormatnya menjemput<br>Dato' | Datin | Tuan | Puan | Encik | Cik<br>ke majlis perkahwinan anakanda kami</p>
-    <p class="xl"><span data-bind="couple.aFull"></span><br>&amp;<br><span data-bind="couple.bFull"></span></p>
+    <p class="arabic invite__bism" lang="ar" dir="rtl">بسم الله الرحمن الرحيم</p>
+    <p class="invite__line">Dengan penuh kesyukuran, kami</p>
+    <p class="invite__parents"><span data-bind="parents.father"></span><br>&amp;<br><span data-bind="parents.mother"></span></p>
+    <p class="invite__line">dengan hormatnya menjemput<br>Dato' | Datin | Tuan | Puan | Encik | Cik<br>ke majlis perkahwinan anakanda kami</p>
+    <h1 class="invite__couple"><span data-bind="couple.aFull"></span><span class="invite__amp">&amp;</span><span data-bind="couple.bFull"></span></h1>
   </section>
 
-  <!-- Details -->
+  <!-- Details: the date set large -->
   <section class="section reveal" id="butiran">
     <h2 class="sec">Butiran</h2>
+    <div class="date">
+      <b class="date__num" data-bind="event.dayNum"></b>
+      <p class="date__side">
+        <span class="date__month"><span data-bind="event.month"></span> <span data-bind="event.year"></span></span>
+        <span data-bind="event.dayName"></span>
+        <small data-bind="event.hijri"></small>
+      </p>
+    </div>
     <dl class="facts">
-      <div><dt>Tarikh</dt><dd><span data-bind="event.dateCard"></span><small data-bind="event.hijri"></small></dd></div>
       <div><dt>Masa</dt><dd data-bind="event.timeCard"></dd></div>
       <div><dt>Tempat</dt><dd data-bind="venue.name"></dd></div>
     </dl>
@@ -131,9 +138,9 @@
   </section>
 
   <!-- Countdown -->
-  <section class="section reveal" data-phase="pre" style="padding-top:28px">
-    <div class="eyebrow eyebrow--left">Lagi</div>
+  <section class="section section--snug reveal" data-phase="pre">
     <div class="countdown" aria-live="off">
+      <span class="countdown__lead">Lagi</span>
       <div><b id="cdD">0</b><span>Hari</span></div>
       <div><b id="cdH">0</b><span>Jam</span></div>
       <div><b id="cdM">0</b><span>Minit</span></div>
@@ -142,10 +149,10 @@
   </section>
 
   <!-- Post-event -->
-  <section class="panel panel--center reveal" data-phase="post" style="margin-top:32px">
-    <div class="names" style="font-size:34px">Terima kasih</div>
-    <p class="muted" style="margin:0">atas kehadiran dan doa restu anda.</p>
-    <div class="placeholder" style="width:100%; height:160px">[Galeri gambar majlis]</div>
+  <section class="section section--center reveal" data-phase="post">
+    <p class="thanks">Terima kasih</p>
+    <p class="muted">atas kehadiran dan doa restu anda.</p>
+    <div class="placeholder placeholder--tall">[Galeri gambar majlis]</div>
   </section>
 
   <svg class="band" width="220" height="32" aria-hidden="true"><use href="#divider"/></svg>
@@ -160,22 +167,22 @@
   <!-- Lokasi -->
   <section class="section reveal" id="lokasi">
     <h2 class="sec">Lokasi</h2>
-    <div class="venue" data-bind="venue.name"></div>
-    <div class="muted" style="font-size:14px; margin-top:-6px" data-bind="venue.address"></div>
-    <div class="placeholder" style="height:150px">[Peta lokasi]</div>
+    <p class="venue" data-bind="venue.name"></p>
+    <p class="muted venue__addr" data-bind="venue.address"></p>
+    <div class="placeholder">[Peta lokasi]</div>
     <div class="btn-row">
-      <a class="btn btn--solid" data-href="venue.waze" target="_blank" rel="noopener">Waze</a>
+      <a class="btn" data-href="venue.waze" target="_blank" rel="noopener">Waze</a>
       <a class="btn" data-href="venue.maps" target="_blank" rel="noopener">Google Maps</a>
     </div>
   </section>
 
-  <!-- RSVP (mock: no backend yet) -->
-  <section class="section reveal" id="rsvp">
+  <!-- RSVP (mock: no backend yet), on its own paper -->
+  <section class="section section--paper reveal" id="rsvp">
     <h2 class="sec">Kehadiran</h2>
 
-    <form id="rsvpForm" data-phase="pre" novalidate style="display:flex; flex-direction:column; gap:14px">
+    <form id="rsvpForm" class="stack" data-phase="pre" novalidate>
       <label class="field" id="rsvpNameField">Nama anda
-        <input type="text" id="rsvpName" placeholder="cth. Pak Ali sekeluarga" autocomplete="name">
+        <input type="text" id="rsvpName" name="nama" placeholder="cth. Pak Ali sekeluarga" autocomplete="name">
       </label>
       <div class="err" id="rsvpErr" hidden>Sila isi nama anda dahulu.</div>
       <div class="toggle" role="group" aria-label="Kehadiran">
@@ -183,54 +190,57 @@
         <button type="button" data-att="tidak" aria-pressed="false">Tidak hadir</button>
       </div>
       <div class="stepper" id="paxRow">
-        <span class="muted" style="font-size:13px">Bilangan (pax)</span>
+        <span class="muted">Bilangan (pax)</span>
         <div>
           <button type="button" id="paxDec" aria-label="Kurang">−</button>
           <output id="pax">2</output>
           <button type="button" id="paxInc" aria-label="Tambah">+</button>
         </div>
       </div>
-      <button type="submit" class="btn btn--solid btn--block" id="rsvpSubmit" style="min-height:48px">Sahkan Kehadiran</button>
+      <button type="submit" class="btn btn--solid btn--block" id="rsvpSubmit">Sahkan Kehadiran</button>
     </form>
 
     <div class="done" id="rsvpDone" hidden>
       <div class="seal seal--stamp" aria-hidden="true"><svg><use href="#wreath"/></svg><span class="seal__txt"><span data-bind="couple.monoA"></span><i></i><span data-bind="couple.monoB"></span></span></div>
-      <div class="names" style="font-size:28px">Terima kasih, <span id="rsvpThanksName"></span>!</div>
-      <div class="muted" style="font-size:14px" id="rsvpSummary"></div>
+      <p class="thanks">Terima kasih, <span id="rsvpThanksName"></span>!</p>
+      <p class="muted" id="rsvpSummary"></p>
       <button type="button" class="link-btn" id="rsvpEdit">Ubah maklum balas</button>
     </div>
 
-    <div class="muted" data-phase="day post" style="text-align:center; font-size:14px">Pendaftaran kehadiran telah ditutup.</div>
+    <p class="muted closed" data-phase="day post">Pendaftaran kehadiran telah ditutup.</p>
   </section>
-
-  <svg class="band" width="220" height="32" aria-hidden="true"><use href="#divider"/></svg>
 
   <!-- Ucapan (mock: stays in this browser only) -->
   <section class="section reveal">
-    <h2 class="sec">Ucapan <span class="sec__count" id="wishCount">0</span></h2>
-    <form id="wishForm" novalidate style="display:flex; flex-direction:column; gap:12px">
+    <h2 class="sec">Ucapan</h2>
+    <form id="wishForm" class="stack" novalidate>
       <label class="field">Nama
-        <input type="text" id="wishName" placeholder="Nama anda">
+        <input type="text" id="wishName" name="nama" placeholder="Nama anda" autocomplete="name">
       </label>
       <label class="field">Ucapan <span class="counter"><span id="wishLen">0</span>/200</span>
-        <textarea id="wishText" rows="3" maxlength="200" placeholder="Selamat pengantin baru…"></textarea>
+        <textarea id="wishText" name="ucapan" rows="3" maxlength="200" placeholder="Selamat pengantin baru…"></textarea>
       </label>
       <button type="submit" class="btn" id="wishSubmit">Hantar Ucapan</button>
     </form>
+    <p class="wish-count"><span id="wishCount">0</span> ucapan</p>
     <div class="wishes" id="wishes"></div>
     <div class="placeholder" id="wishEmpty">Jadilah yang pertama mendoakan <span data-bind="couple.a"></span>&nbsp;&amp;&nbsp;<span data-bind="couple.b"></span>.</div>
     <template id="tplWish"><div class="wish"><q></q><small></small></div></template>
   </section>
 
   <!-- Hubungi -->
-  <section class="section reveal" id="hubungi" style="padding-bottom:56px">
+  <section class="section reveal" id="hubungi">
     <h2 class="sec">Hubungi</h2>
-    <div id="contacts" style="display:flex; flex-direction:column; gap:10px"></div>
-    <template id="tplContact"><a class="contact btn" target="_blank" rel="noopener"><span></span><span>WhatsApp</span></a></template>
-    <div style="margin-top:28px"><div class="seal-line" aria-hidden="true"><div class="seal"><svg><use href="#wreath"/></svg><span class="seal__txt"><span data-bind="couple.monoA"></span><i></i><span data-bind="couple.monoB"></span></span></div></div></div>
-    <div class="names" style="text-align:center; font-size:20px"><span data-bind="couple.a"></span> &amp; <span data-bind="couple.b"></span></div>
-    <img class="fl fl--foot" src="assets/img/flowers/sprig.webp" alt="" aria-hidden="true">
+    <div class="contacts" id="contacts"></div>
+    <template id="tplContact"><a class="contact" target="_blank" rel="noopener"><span></span><span>WhatsApp</span></a></template>
   </section>
+
+  <!-- Closing: the maroon band again, the seal and the names -->
+  <footer class="closing">
+    <div class="seal" aria-hidden="true"><svg><use href="#wreath"/></svg><span class="seal__txt"><span data-bind="couple.monoA"></span><i></i><span data-bind="couple.monoB"></span></span></div>
+    <p class="closing__names"><span data-bind="couple.a"></span> &amp; <span data-bind="couple.b"></span></p>
+    <img class="fl fl--foot" src="assets/img/flowers/sprig.webp" alt="" aria-hidden="true">
+  </footer>
 </main>
 
 <!-- ========== BOTTOM NAV ========== -->
@@ -246,15 +256,15 @@
   <button class="sheet__scrim" type="button" aria-label="Tutup" data-close></button>
   <div class="sheet__panel" role="dialog" aria-modal="true" aria-labelledby="calTitle">
     <div class="sheet__grip"></div>
-    <div class="display" style="font-size:24px" id="calTitle">Simpan tarikh</div>
-    <div class="muted" style="font-size:14px; margin-top:-6px">Walimatul Urus <span data-bind="couple.a"></span> &amp; <span data-bind="couple.b"></span>, <span data-bind="event.dateCard"></span></div>
-    <a class="sheet__opt btn" id="gcalLink" target="_blank" rel="noopener">Google Calendar</a>
-    <button class="sheet__opt btn" id="icsBtn" type="button">Apple / Outlook (.ics)</button>
-    <button class="link-btn" type="button" data-close style="color:var(--muted); text-decoration:none">Tutup</button>
+    <p class="sheet__title" id="calTitle">Simpan tarikh</p>
+    <p class="muted sheet__sub">Walimatul Urus <span data-bind="couple.a"></span> &amp; <span data-bind="couple.b"></span>, <span data-bind="event.dateCard"></span></p>
+    <a class="sheet__opt" id="gcalLink" target="_blank" rel="noopener">Google Calendar</a>
+    <button class="sheet__opt" id="icsBtn" type="button">Apple / Outlook (.ics)</button>
+    <button class="link-btn link-btn--quiet" type="button" data-close>Tutup</button>
   </div>
 </div>
 
-<script src="assets/js/content.js?v=6"></script>
-<script src="assets/js/app.js?v=7"></script>
+<script src="assets/js/content.js?v=7"></script>
+<script src="assets/js/app.js?v=8"></script>
 </body>
 </html>

@@ -60,7 +60,7 @@ window.CONTENT = {
   rsvp: { maxPax: 5 },
 
   features: {
-    intro: true,    // songket loom intro (skip with ?nointro)
+    intro: true,    // gold flourish + monogram intro (skip with ?nointro)
     petals: true    // hujan bunga
   }
 };

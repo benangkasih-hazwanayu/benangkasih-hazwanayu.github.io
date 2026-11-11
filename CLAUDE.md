@@ -13,7 +13,7 @@ Open `index.html` directly in a browser, or serve the folder (for example `pytho
 - `?theme=marun|awan|melur|malam` sets the theme
 - `?phase=pre|day|post` forces the event phase
 - `?to=Pak%20Ali` adds the personal "Kepada …" greeting
-- `?nointro` skips the songket loom intro
+- `?nointro` skips the flourish-and-monogram intro
 
 These can be combined.
 
@@ -32,7 +32,7 @@ How the HTML is driven:
 - `data-guest` / `data-guest-line` are filled or unhidden from `?to=`.
 - `.reveal` elements fade in through an IntersectionObserver. Respect `prefers-reduced-motion`: the existing code disables the intro, petals and reveals.
 
-Flow: intro (loom built in JS, about 4.3s) → `#cover` → tap `#openBtn`, which unlocks scrolling, starts music (the tap is the user gesture browsers require for autoplay) and starts petals.
+Flow: intro (pure CSS/SVG, about 4.3s) → `#cover` → tap `#openBtn`, which unlocks scrolling, starts music (the tap is the user gesture browsers require for autoplay) and starts petals.
 
 ## Pending integration points
 
