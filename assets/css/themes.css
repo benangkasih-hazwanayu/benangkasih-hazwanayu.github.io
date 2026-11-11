@@ -86,27 +86,27 @@
   --gold: #C9A96E;
 }
 
-/* Marun — a dark still life: warm near-black, cream ink, champagne gold, one oxblood band */
+/* Marun — wine maroon bands, warm cream paper, soft gold */
 [data-theme="marun"] {
-  --bg: #15100E;
-  --surface: #1F1815;
-  --well: #1F1815;
-  --band: #4A121C;
-  --ink: #F2E9DA;
-  --muted: #B8AA97;
-  --line: rgba(242, 233, 218, .14);
-  --accent: #D9B77E;
-  --accent-ink: #E8CC98;
-  --btn: #D9B77E;
-  --btn-ink: #1A1310;
-  --nav: #15100E;
-  --petal: #F6E3E0;
-  --err: #F0A08F;
-  --intro-bg: #2A0E14;
-  --thread: #D4B677;
-  --glow: rgba(212, 182, 119, .35);
-  --backdrop: #0C0908;
-  --cover-bg: #0E0A09;
-  --cover-ink: #F2E9DA;
-  --gold: #B08D57;
+  --bg: #F8F1EA;
+  --surface: #FFFBF7;
+  --well: #F1E6DC;
+  --band: #5A1220;
+  --ink: #3B1219;
+  --muted: #7D5B5F;
+  --line: #E6D3C8;
+  --accent: #7A1C2C;
+  --accent-ink: #5A1220;
+  --btn: #6E1828;
+  --btn-ink: #FBF4EC;
+  --nav: #FFFBF7;
+  --petal: #F4D9D6;
+  --err: #A33A2A;
+  --intro-bg: #4A0E19;
+  --thread: #D9B97E;
+  --glow: rgba(217, 185, 126, .35);
+  --backdrop: #2E0910;
+  --cover-bg: #5A1220;
+  --cover-ink: #FBF4EC;
+  --gold: #C9A46A;
 }
