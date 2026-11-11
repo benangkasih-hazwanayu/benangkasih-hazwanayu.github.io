@@ -16,10 +16,10 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri&family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Geist:wght@400;500&display=swap">
 <script>document.documentElement.className += ' js';</script>
-<link rel="stylesheet" href="assets/css/themes.css?v=5">
-<link rel="stylesheet" href="assets/css/base.css?v=10">
+<link rel="stylesheet" href="assets/css/themes.css?v=6">
+<link rel="stylesheet" href="assets/css/base.css?v=11">
 </head>
 <body class="is-locked">
 
@@ -33,11 +33,6 @@
         <ellipse cx="34.3" cy="89.3" rx="1.7" ry="4.3" transform="rotate(70 34.3 89.3)"/><ellipse cx="28.1" cy="80.9" rx="1.7" ry="4.3" transform="rotate(-201 28.1 80.9)"/><ellipse cx="18.6" cy="78.4" rx="1.7" ry="4.3" transform="rotate(-264 18.6 78.4)"/><ellipse cx="16.8" cy="68.2" rx="1.7" ry="4.3" transform="rotate(-175 16.8 68.2)"/><ellipse cx="9.4" cy="61.8" rx="1.7" ry="4.3" transform="rotate(-238 9.4 61.8)"/><ellipse cx="12.2" cy="51.8" rx="1.7" ry="4.3" transform="rotate(-149 12.2 51.8)"/><ellipse cx="8.3" cy="42.8" rx="1.7" ry="4.3" transform="rotate(-212 8.3 42.8)"/><ellipse cx="15.2" cy="35.0" rx="1.7" ry="4.3" transform="rotate(-123 15.2 35.0)"/><ellipse cx="15.7" cy="25.2" rx="1.7" ry="4.3" transform="rotate(-186 15.7 25.2)"/><ellipse cx="25.3" cy="21.3" rx="1.7" ry="4.3" transform="rotate(-97 25.3 21.3)"/><ellipse cx="30.0" cy="12.7" rx="1.7" ry="4.3" transform="rotate(-160 30.0 12.7)"/>
       </g>
       <use href="#wreathL" transform="matrix(-1 0 0 1 100 0)"/>
-    </symbol>
-    <symbol id="divider" viewBox="0 0 220 32" fill="none" stroke="currentColor" stroke-width="1.2">
-      <path d="M0 16 H78 C88 16 92 6 100 6 C108 6 110 16 104 19 C98 22 94 15 99 13"/>
-      <path d="M220 16 H142 C132 16 128 6 120 6 C112 6 110 16 116 19 C122 22 126 15 121 13"/>
-      <path d="M104 24 C107 27 110 28 110 28 C110 28 113 27 116 24" stroke-width="1"/>
     </symbol>
   </defs>
 </svg>
@@ -59,35 +54,30 @@
   <button class="intro__skip" id="skipIntro" type="button">Langkau</button>
 </div>
 
-<!-- ========== COVER: lifts like a curtain ========== -->
+<!-- ========== COVER: a type specimen of the two names; lifts like a curtain ========== -->
 <div class="cover" id="cover">
-  <div class="cover__inner">
-    <img class="fl fl--cover-tr" src="assets/img/flowers/corner-tr.webp" alt="" aria-hidden="true">
-    <img class="fl fl--cover-bl" src="assets/img/flowers/corner-bl.webp" alt="" aria-hidden="true">
-    <div class="arch">
-      <div class="arch__body">
-        <svg class="draw arch__curl" viewBox="0 0 300 140" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-          <path d="M10 130 C10 70 60 40 110 60 C150 76 140 120 110 116 C88 113 92 88 112 90"/>
-          <path d="M290 130 C290 70 240 40 190 60 C150 76 160 120 190 116 C212 113 208 88 188 90"/>
-        </svg>
-        <div class="arch__names rise">
-          <p class="names" data-bind="couple.a"></p>
-          <p class="amp">&amp;</p>
-          <p class="names" data-bind="couple.b"></p>
-        </div>
-        <div class="dateblock rise"><span data-bind="event.dayName"></span><span class="dateblock__mid"><small data-bind="event.month"></small><b data-bind="event.dayNum"></b><small data-bind="event.year"></small></span><span data-bind="event.dayStart"></span></div>
-        <p class="arch__title rise">Walimatul Urus</p>
-      </div>
-      <div class="arch__foot rise">
-        <p class="arch__guest" data-guest-line hidden>Kepada <span data-guest></span></p>
-        <button class="cover__cta" id="openBtn" type="button">Buka Jemputan</button>
-        <p class="arch__note">Dengan iringan muzik</p>
-      </div>
+  <div class="cover__inner rise">
+    <p class="cover__top"><span>Walimatul Urus</span><span data-bind="event.hijri"></span></p>
+    <div class="spec">
+      <p class="spec__line" data-bind="couple.a"></p>
+      <p class="spec__line spec__line--amp">&amp;</p>
+      <p class="spec__line spec__line--end" data-bind="couple.b"></p>
+    </div>
+    <dl class="cover__facts">
+      <div><dt>Hari</dt><dd data-bind="event.dayName"></dd></div>
+      <div><dt>Tarikh</dt><dd data-bind="event.dateCard"></dd></div>
+      <div><dt>Masa</dt><dd data-bind="event.dayStart"></dd></div>
+    </dl>
+    <p class="cover__venue" data-bind="venue.name"></p>
+    <div class="cover__foot">
+      <p class="cover__guest" data-guest-line hidden>Kepada <span data-guest></span></p>
+      <button class="btn btn--solid btn--block" id="openBtn" type="button">Buka Jemputan</button>
+      <p class="cover__note">Dengan iringan muzik</p>
     </div>
   </div>
 </div>
 
-<!-- ========== FIXED UI ========== -->
+ ========== -->
 <div class="progress" aria-hidden="true"><span id="progress"></span></div>
 <div class="petals" id="petals" aria-hidden="true"></div>
 <button class="music" id="musicBtn" type="button" aria-label="Mainkan muzik" hidden><span class="eq"><i></i><i></i><i></i></span></button>
@@ -154,8 +144,6 @@
     <p class="muted">atas kehadiran dan doa restu anda.</p>
     <div class="placeholder placeholder--tall">[Galeri gambar majlis]</div>
   </section>
-
-  <svg class="band" width="220" height="32" aria-hidden="true"><use href="#divider"/></svg>
 
   <!-- Aturcara -->
   <section class="section reveal">
@@ -235,7 +223,7 @@
     <template id="tplContact"><a class="contact" target="_blank" rel="noopener"><span></span><span>WhatsApp</span></a></template>
   </section>
 
-  <!-- Closing: the maroon band again, the seal and the names -->
+  <!-- Closing: the seal and the names, set large -->
   <footer class="closing">
     <div class="seal" aria-hidden="true"><svg><use href="#wreath"/></svg><span class="seal__txt"><span data-bind="couple.monoA"></span><i></i><span data-bind="couple.monoB"></span></span></div>
     <p class="closing__names"><span data-bind="couple.a"></span> &amp; <span data-bind="couple.b"></span></p>
