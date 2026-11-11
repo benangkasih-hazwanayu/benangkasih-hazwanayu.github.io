@@ -13,6 +13,7 @@
 
 /* Awan Larat — ivory + gold */
 [data-theme="awan"] {
+  --band: #3B3226;
   --well: #EFE7D8;
   --bg: #F7F2E8;
   --surface: #FFFCF5;
@@ -37,6 +38,7 @@
 
 /* Melur — sage + jasmine white */
 [data-theme="melur"] {
+  --band: #2E4A3B;
   --well: #E6ECE1;
   --bg: #F2F4EE;
   --surface: #FFFFFF;
@@ -61,6 +63,7 @@
 
 /* Malam — navy + champagne */
 [data-theme="malam"] {
+  --band: #0A1222;
   --well: #1A2B4A;
   --bg: #13203A;
   --surface: #1A2B4A;
@@ -83,26 +86,27 @@
   --gold: #C9A96E;
 }
 
-/* Marun — oat paper, warm black ink, one maroon accent (the specimen look) */
+/* Marun — a dark still life: warm near-black, cream ink, champagne gold, one oxblood band */
 [data-theme="marun"] {
-  --bg: #F8F2E8;
-  --surface: #FBF7F0;
-  --well: #EFE7DA;
-  --ink: #1E1915;
-  --muted: #6B625A;
-  --line: #D8CDBD;
-  --accent: #7B1E2B;
-  --accent-ink: #5E1420;
-  --btn: #1E1915;
-  --btn-ink: #F8F2E8;
-  --nav: #F8F2E8;
+  --bg: #15100E;
+  --surface: #1F1815;
+  --well: #1F1815;
+  --band: #4A121C;
+  --ink: #F2E9DA;
+  --muted: #B8AA97;
+  --line: rgba(242, 233, 218, .14);
+  --accent: #D9B77E;
+  --accent-ink: #E8CC98;
+  --btn: #D9B77E;
+  --btn-ink: #1A1310;
+  --nav: #15100E;
   --petal: #F6E3E0;
-  --err: #A33A2A;
+  --err: #F0A08F;
   --intro-bg: #2A0E14;
   --thread: #D4B677;
   --glow: rgba(212, 182, 119, .35);
-  --backdrop: #E9E0D2;
-  --cover-bg: #5E1420;
-  --cover-ink: #F8F2E8;
+  --backdrop: #0C0908;
+  --cover-bg: #0E0A09;
+  --cover-ink: #F2E9DA;
   --gold: #B08D57;
 }
